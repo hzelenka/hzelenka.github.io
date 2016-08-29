@@ -1,0 +1,5 @@
+*.hs
+site
+_site
+_cache
+deploy
