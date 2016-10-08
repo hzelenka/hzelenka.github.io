@@ -46,7 +46,7 @@ Now the ratio is 472 out of 1000 – about \\( \\frac{1}{2} \\) – but it's not
 
 [<img src="/images/method3.png" width="600">](https://hzelenka.github.io/images/method3.png)
 
-Finally, a chart that's obviously different! Just 228 out of 1000, about \\( \\frac{1}{4} \\) To use the technical mathematical term, it looks like a donut. Think about where the midpoints fall using the first two methods. That inner circle represents only a quarter of the area of the outer circle, but we have a higher chance than that of landing inside if we choose two random endpoints or choose a random point along a radius.
+Finally, a chart that's obviously different! Just 228 out of 1000 lines, about \\( \\frac{1}{4} \\), were longer. To use the technical mathematical term, it looks like a donut. Think about where the midpoints fall using the first two methods. That inner circle represents only a quarter of the area of the outer circle, but we have a higher chance than that of landing inside if we choose two random endpoints or choose a random point along a radius.
 
 Let's back up a bit. What is the chance that any particular chord will be picked by one of these three processes? Because there are infinitely many possible chords, the answer is actually zero for all three! You can think of the math as \\( \\frac{1}{\\infty} = 0 \\). Strictly speaking, division by infinity is undefined, but the formula at least points in the right direction.
 
