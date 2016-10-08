@@ -4,7 +4,7 @@ description: If you try to informally describe the length of a random chord in a
 tags: probability, haskell
 ---
 
-The [Bertrand paradox](https://wikipedia.org/wiki/Bertrand_paradox_(probability)) may be set up as follows. Draw a unit circle (radius 1) and inscribe an equilateral triangle; each side has length `\( \sqrt{3} \)`. Now draw a random _chord_, or line joining two points along the side of the circle. What is the probability that the chord is longer than a side of the inscribed triangle?
+The [Bertrand paradox](https://wikipedia.org/wiki/Bertrand_paradox_(probability)) may be set up as follows. Draw a unit circle (radius 1) and inscribe an equilateral triangle; each side has length \\( \sqrt{3} \\). Now draw a random _chord_, or line joining two points along the side of the circle. What is the probability that the chord is longer than a side of the inscribed triangle?
 
 Here's the paradox: Joseph Bertrand presented three different heuristic arguments, each giving a different probability. Let's walk through all three. Along the way, I'll use some Haskell code available [here](https://github.com/hzelenka/bertrand-paradox) to generate some diagrams through the [chart](https://hackage.haskell.org/package/Chart) package. The code is not critical to understanding the post, but it _is_ pretty cool that it generated all of these charts in only 100 lines!
 
@@ -16,7 +16,7 @@ A chord is uniquely identified by its two endpoints along the edge of a circle. 
 
 (As an aside, all the images in this post are scaled down slightly with minor loss of definition. You can click on them to view their full 800 by 600 pixel glory.)
 
-The three sides of the triangle establish three "zones", in which every endpoint will land. The chord will be longer than `\\( \\sqrt{3} \\)` if and only if the second endpoint lands in the furthest zone, which makes up a third of the circle. We have a \\( \\frac{1}{3} \\) chance of a long chord.
+The three sides of the triangle establish three "zones", in which every endpoint will land. The chord will be longer than \\( \\sqrt{3} \\) if and only if the second endpoint lands in the furthest zone, which makes up a third of the circle. We have a \\( \\frac{1}{3} \\) chance of a long chord.
 
 That's the first heuristic, anyway. Here's the second. Draw a line from the center of the circle to an edge point (i.e. a radius). Again, we can rotate the triangle if we need to, so we might as well draw the radius to the very bottom of the circle. Now choose an arbitrary point on the radius and draw a chord perpendicular to it:
 
