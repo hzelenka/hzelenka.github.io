@@ -4,7 +4,7 @@ description: If you try to informally describe the length of a random chord in a
 tags: probability, haskell
 ---
 
-The [Bertrand paradox](https://wikipedia.org/wiki/Bertrand_paradox_(probability)) may be set up as follows. Draw a unit circle (radius 1) and inscribe an equilateral triangle; each side has length \\( \sqrt{3} \\). Now draw a random _chord_, or line joining two points along the side of the circle. What is the probability that the chord is longer than a side of the inscribed triangle?
+The [Bertrand paradox](https://wikipedia.org/wiki/Bertrand_paradox_(probability)) may be set up as follows. Draw a unit circle (radius 1) and inscribe an equilateral triangle; each side has length \\( \\sqrt{3} \\). Now draw a random _chord_, or line joining two points along the side of the circle. What is the probability that the chord is longer than a side of the inscribed triangle?
 
 Here's the paradox: Joseph Bertrand presented three different heuristic arguments, each giving a different probability. Let's walk through all three. Along the way, I'll use some Haskell code available [here](https://github.com/hzelenka/bertrand-paradox) to generate some diagrams through the [chart](https://hackage.haskell.org/package/Chart) package. The code is not critical to understanding the post, but it _is_ pretty cool that it generated all of these charts in only 100 lines!
 
