@@ -19,12 +19,12 @@ body {
 }
 
 div#header {
-    background: url(../images/haskell-logo.png) no-repeat;
+    background: url(../images/haskell-purple.png) no-repeat;
     background-size: 73px;
     border-bottom: 2px solid #ddd;
     margin-bottom: 30px;
     margin-top: 50px;
-    padding: 12px 0px 12px 0px;
+    padding: 18px 0px 18px 0px;
 }
 
 div#logo a {
@@ -49,7 +49,7 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: #343333;
+    color: #512E5F;
     font-size: 18px;
     font-weight: bold;
     margin-left: 12px;
@@ -80,10 +80,16 @@ div#footer a{
 
 h1 {
     font-size: 24px;
+    color: #212F3C;
 }
 
 h2 {
     font-size: 20px;
+    color: #212F3C;
+}
+
+h3 {
+  color: #212F3C;
 }
 
 div.info {
@@ -119,6 +125,7 @@ pre.sourceCode {
 
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
    {
+       width = 100%;
        padding: 15;
        vertical-align: baseline;
        border: 1px solid black;
