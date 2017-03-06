@@ -3,3 +3,5 @@ site
 _site
 _cache
 deploy
+.cabal-sandbox/
+.cabal.sandbox.config
