@@ -192,6 +192,8 @@ Obviously the answer is no, or I wouldn't have written so much about it! The cat
 
 Is "discovered" the wrong word? I don't think so. Math exists whether we think about it or not, which I find oddly comforting.
 
+***
+
 <sup><sub><b id="f1">1</b> A purist might object that the group operation being _closed_ and always giving another element of the group constitutes a fourth axiom. The way I see it, it's impossible to define a function without giving its codomain, aka what kind of things it returns, so closure was specified by defining the operation. [↩](#a1)</sub></sup>
 
 <sup><sub><b id="f2">2</b> The fact that this procedure always results in a positive integer less than 6 (or whatever other nonzero integer we were using) is called [Euclidean division](https://en.wikipedia.org/wiki/Euclidean_division). [↩](#a2)</sub></sup>
