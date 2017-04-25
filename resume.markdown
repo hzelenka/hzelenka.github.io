@@ -3,7 +3,7 @@
 # Henry Zelenka
 
 Henry C Zelenka | hcz2@georgetown.edu
-:--- | ---:
+:--- | :---
 Kennedy Hall Box 579044 | github.com/hzelenka
 Georgetown University | hzelenka.github.io
 
@@ -22,9 +22,9 @@ Georgetown University | hzelenka.github.io
 
 ## Coursework
 
+* **Mathematics**: Multivariable Calculus; Linear Algebra; Introduction to Proof and Problem Solving; Ordinary Differential Equations; Abstract Algebra; Complex Analysis
 * **Economics**: Intermediate Microeconomics; Intermediate Macroeconomics; Economic Statistics; Introduction to Econometrics; International Trade; International Finance; Time Series Econometrics; Game Theory
 * **German**: Text in Context; The Alps in Art, Film, and Literature; Business German; Portraits of the Artist; Revisiting Heimat in Literature and Film; Luther to Lessing; Images of Childhood
-* **Mathematics**: Multivariable Calculus; Linear Algebra; Introduction to Proof and Problem Solving; Ordinary Differential Equations; Abstract Algebra; Complex Analysis
 
 --------------------
 
@@ -35,7 +35,7 @@ Georgetown University | hzelenka.github.io
 : **Tutorial: Abstract Algebra II**; Independent Study Course with Professor Sara Gharahbeigi (Washington, DC)
 
     * Studying advanced algebraic topics to include Sylow theory, field extensions, and Galois theory
-    * Holding weekly meetings to discuss targeted concepts and assignments
+    * Independently completing proofs and problems for weekly one-on-one meetings
 
 *Summer 2016, 2015, 2014*
 
@@ -53,26 +53,8 @@ Georgetown University | hzelenka.github.io
 
 --------------------
 
-## Sample Projects
-
-*Idris*
-:  **idris-proofs**; [GitHub](github.com/hzelenka/idris-proofs)
-
-    * Package using Idris, a language with dependent types
-    * Proves foundational theorems in algebra and related fields such as the division algorithm
-
-*Haskell*
-
-:  **bertrand-paradox**; [GitHub](github.com/hzelenka/bertrand-paradox), [Blog Post](hzelenka.github.io/posts/2016-10-08-bertrandparadox.html)
-
-    * Command-line program generating random diagrams to demonstrate the Bertrand paradox
-    * Leverages Haskell’s concision to show result in less than 100 source lines of code
-
---------------------
-
 ## Skills
 
-* Programming Languages: Haskell (advanced), Idris (advanced), C & C++ (intermediate)
-    * Haskell Libraries: chart-diagrams, hakyll, lens, pandoc
-* Tools: Cabal, Git & Github, LaTeX, Markdown, Stack, Unix
+* Programming Languages: C & C++, Coq, Haskell, Idris, Python, Rust
+* Tools: Git & Github, LaTeX, Markdown, Microsoft Office (Word, Excel, PowerPoint), Unix
 * Foreign Languages: German (Full Professional Proficiency), Spanish (Limited Working Proficiency)
