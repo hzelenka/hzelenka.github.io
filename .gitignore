@@ -1,7 +1,7 @@
-*.hs
 site
 _site
 _cache
 deploy
+dist/
 .cabal-sandbox/
-.cabal.sandbox.config
+cabal.sandbox.config
