@@ -12,7 +12,7 @@ Here are three apparent tautologies:
 
 These statements seem not just true, but *trivially* true. Their truth is so obvious as to be meaningless. Kant would call them [*analytic* statements](https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction), like "all bachelors are unmarried men".
 
-I claim that these statements are not quite tautologies. Interactive theorem provers such as Coq, Agda and Idris subscribe to intuitionistic type theory, in which these three statements are –- well, not exactly *false*, but not *true* either. We can prove them in certain instances, but they do not hold in general.
+I claim that these statements are not quite tautologies. Interactive theorem provers such as Coq, Agda and Idris subscribe to intuitionistic type theory, in which these three statements are – well, not exactly *false*, but not *true* either. We can prove them in certain instances, but they do not hold in general.
 
 Denying double negation in particular might sound nonsensical. Many research mathematicians I have spoken to express shock and even offense that a double negative is not a positive in interactive theorem provers. (As David Hilbert put it, "Dieses Tiertum non datur dem Mathematiker zu nehmen, wäre etwa, wie wenn man dem Astronomen das Ferhrohr oder dem Boxer den Gebrauch der Fäuste untersagen wollte": to deny the mathematician double negation would be like to deny the astronomer the telescope or the boxer the fists.) In fact, in intuitionistic type theory, it is perfectly logical to leave these three axioms out, even a good idea, and we can learn why with a detour into programming data types.
 
@@ -50,6 +50,8 @@ Curry-Howard goes deeper still. It is often the case that trivialities remain tr
 These tentative steps into intuitionistic type theory are enough to recognize the key way it differs from classical logic. Classically, truth and falsity are a fundamental part of any proposition. In a sense, all there is to a proposition in classical logic is whether it's true or false. That's all we need to know to join propositions together with fun symbols like \\( \\implies \\) and \\( \\iff \\).
 
 Intutionistic type theory is concerned with not only *if* a given proposition is true, but *why* it's true – what its proof is. Proving a proposition amounts to defining an object fitting some specifications. Proofs are mathematical objects in intuitionistic type theory, just like integers or polynomials.
+
+Identifying proof with the instantiation of a particular mathematic object is called *constructiveness*. Strictly speaking, constructiveness is a restriction – under the alternative, classical logic, more potential lines of reasoning are valid – but it's the best way of thinking if we want logic to correspond to programming. Imagine trying to hail an Uber on your phone, only for the app to claim that it's not going to get a cab, but it would be theoretically possible to do so if it really wanted to. That would be the equivalent of a nonconstructive proof.
 
 Axiomatizations are rarely as elegant as Peano's definition of the natural numbers, but they are often more involved. Consider this axiomatization that defines what it means for one natural number to be less than or equal  to another:
 
