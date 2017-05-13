@@ -51,7 +51,7 @@ These tentative steps into intuitionistic type theory are enough to recognize th
 
 Intutionistic type theory is concerned with not only *if* a given proposition is true, but *why* it's true – what its proof is. Proving a proposition amounts to defining an object fitting some specifications. Proofs are mathematical objects in intuitionistic type theory, just like integers or polynomials.
 
-Identifying proof with the instantiation of a particular mathematic object is called *constructiveness*. Strictly speaking, constructiveness is a restriction – under the alternative, classical logic, more potential lines of reasoning are valid – but it's the best way of thinking if we want logic to correspond to programming. Imagine trying to hail an Uber on your phone, only for the app to claim that it's not going to get a cab, but it would be theoretically possible to do so if it really wanted to. That would be the equivalent of a nonconstructive proof.
+Identifying proof with the instantiation of a particular mathematic object is called *constructivism*. Strictly speaking, constructivism is a restriction – under the alternative, classical logic, more potential lines of reasoning are valid – but it's the best way of thinking if we want logic to correspond to programming. Imagine trying to hail an Uber on your phone, only for the app to claim that it's not going to get a cab, but it would be theoretically possible to do so if it really wanted to. That would be the equivalent of a nonconstructive proof.
 
 Axiomatizations are rarely as elegant as Peano's definition of the natural numbers, but they are often more involved. Consider this axiomatization that defines what it means for one natural number to be less than or equal  to another:
 
@@ -132,7 +132,7 @@ Remember that we prove a theorem by presenting a valid member of the type. Since
 
 We call types like this one \\( \\Sigma \\)-types (that's a capital Greek sigma). Concretely, \\( \\Sigma \\)-types are ordered pairs where the type of the second element is allowed to depend on the type of the first; that's so much more confusing than just saying that they correspond to \\( \\exists \\), so let's stay away from that definition!
 
-There's one last thing we need to define: negation. In classical logic, we could just say something like "the negation of \\(A\\) is defined to be the statement that is true precisely when \\(A\\) is false". That definition isn't exactly wrong, but it treats the truth or falsity of a proposition as a given. Either that, or it's like we have superpowers: I can take a proposition and generate its exact opposite! In the proof-aware mathematics of type theory, where we prove a proposition by presenting an object embodying it, we can't maintain constructiveness by defining negation this way.
+There's one last thing we need to define: negation. In classical logic, we could just say something like "the negation of \\(A\\) is defined to be the statement that is true precisely when \\(A\\) is false". That definition isn't exactly wrong, but it treats the truth or falsity of a proposition as a given. Either that, or it's like we have superpowers: I can take a proposition and generate its exact opposite! In the proof-aware mathematics of type theory, where we prove a proposition by presenting an object embodying it, we can't maintain constructivism by defining negation this way.
 
 A better idea is to define the following data type in Idris:
 
