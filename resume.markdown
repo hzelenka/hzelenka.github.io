@@ -1,7 +1,5 @@
 [Also available in LaTeX!](/images/henry-zelenka-resume.pdf)
 
-# Henry Zelenka
-
 Henry C Zelenka | hcz2@georgetown.edu
 :--- | :---
 Kennedy Hall Box 579044 | github.com/hzelenka
@@ -14,8 +12,8 @@ Georgetown University | hzelenka.github.io
 : **Bachelor of Arts**; Georgetown University (Washington, DC)
 
     * Mathematics and German (Double Major), Economics (Minor)
-    * GPA: 3.78/4.00 (3.86/4.00 in Mathematics major, 4.00/4.00 in German major)
-    * First Honors: Spring 2016; Second Honors: Spring 2015, Fall 2015, Fall 2016
+    * GPA: 3.79/4.00 (3.88/4.00 in Mathematics major, 3.89/4.00 in German major)
+    * *First Honors:* Spring 2016; *Second Honors:* Spring 2017, Fall 2016, Fall 2015, Spring 2015
     * Completed five-week study abroad program, Trier, Germany, Summer 2016
 
 --------------------
