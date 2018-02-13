@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Henry Zelenka - Burnside groups for the masses</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">Henry Zelenka</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../archive.html">Blog</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Burnside groups for the masses</h1>
+
+            <div class="info">
+    Posted on March  5, 2017
+    
+</div>
+
+<h2 id="preliminaries">Preliminaries</h2>
+<p>The most impressive-sounding class I have ever taken is Abstract Algebra. As much as I enjoy seeming like a genius, abstract algebra is not nearly as technical as it sounds. All it does is <em>abstract</em> the process of solving for \(x\) into new yet familiar structures. Here’s an example. Say I give you a list of numbers (or letters, or Viking runes; it really doesn’t matter) that can be “multiplied” together. For the sake of concreteness, I’ll give you two, which we call \(a\) and \(b\). We can multiply them together in any order and use exponential notation in the obvious way; for example, \( a^3=a*a*a \). Our algebraic system is subject to only one rule: raising either \(a\) or \(b\) to some fixed integer, call it \(n\), equals an identity element \(e\) that we can think of as representing \( 1 \); it can be eliminated from any product. Then, say, \(a^{n+1}=a\) because we can also write \( a^{n+1} = a^n * a^1 = e *a \).</p>
+<p>Say we have \(n=5\) so that \( a^5=e \) and \( b^5=e \) always holds. Here are some elements of our strange new algebraic system:</p>
+<p>\[ a^2 , b^3 , ab^4 , b^4 a, aba^3 ba^2 b \]</p>
+<p>Note that, when I said the only rule, I really did mean the <em>only</em> rule. Commutativity doesn’t even hold, which is why I could list \( ab^4 \) and \( b^4 a \) as distinct.</p>
+<p>How many distinct elements does our algebraic system have? More generally, does it have a finite or infinite number of elements?</p>
+<p>Table the previous two questions for a moment. I’m already tired of the cumbersome term “our algebraic system”, so I’ll give up the ghost. Such a system where we start with \(m\) distinct letters in which any term raised to the \(n\)th power is the identity is called the <em>free Burnside group of rank m and exponent n</em>, or \(B(m,n)\) for short. The one I introduced was \( B(2,5) \).</p>
+<p>The <em>first Burnside problem</em> asked whether all such \(B(m,n)\) are finite. Intuitively, or at least according to my intuition, the answer ought to be yes, but the Russian mathematicians Evgeny Golod and Igor Shafarevich proved in 1964 that some \(B(m,n)\) are infinite. The <em>second Burnside problem</em> asks the obvious followup: <em>which</em> \(B(m,n)\) are infinite?</p>
+<p>I asked to table those two questions from earlier because I don’t actually know the answer. Nobody does, actually! It is as of yet unknown how many elements \(B(2,5)\) has.</p>
+<p>Of course, just because the second Burnside problem is unsolved doesn’t mean I’m done talking about it…</p>
+<h2 id="group-theory">Group Theory</h2>
+<p>\( B(m,n) \) is an instance of a group, one of the fundamental algebraic structures in mathematics. Groups are defined by taking some set \(G\) and a binary operation \(*\) on the set that obeys the following three axioms:</p>
+<ul>
+<li>The operation \(*\) is <em>associative</em>. If we chain together elements for something like \( x * y * z \), we can evaluate either \( x * y \) or \( y * z \) first and still get the same answer.</li>
+<li>There exists some element \( e \) in \( G \) that acts as an <em>identity</em> under the operation. For any other \( x \) in \( G \), \( e*x=x*e=x \).</li>
+<li>Given some element \( x \) in \( G \), we can find an <em>inverse</em> \( x^{-1} \) such that \( x * x^{-1} =x^{-1} * x=e \).</li>
+</ul>
+<p>The axioms are not very demanding, so it’s easy to come up with examples of groups – say, the integers \( \mathbb{Z} \) under addition or the nonzero complex numbers \( \mathbb{C} \setminus \{0\} \) under multiplication. The axioms are also powerful enough to derive a few useful algebraic properties:</p>
+<ul>
+<li>The identity is unique – if there is some other element \(e’\) in the group satisfying the same property as the regular identity \( e \), we must have \(e=e’\). \(e * e’ = e’ \) because \( e \) is an identity, but also \( e * e’ = e \) since \( e’ \) is an identity too, so \(e=e’\) by transitivity.</li>
+<li>We can cancel elements – given that \( x * y = x * z \), we can always conclude that \( y = z \). Cancellation holds because we can multiply both sides of the equality by \( x^{-1} \) for \( x^{-1} * x * y = x^{-1} * x * z \), but then \( e * y = e * z \) and \( y=z \).</li>
+<li>Inverses are unique like the identity. Say \( x \) has two inverses \( x^{-1} \) and \( x^{-1\prime} \). Then \( x * x^{-1} = x * x^{-1\prime} \) and \( x^{-1} = x^{-1\prime}\) by cancellation.</li>
+</ul>
+<p>Both examples of groups I gave earlier were obviously infinite, but it’s easy to come up with finite groups too. One kind of stupid example is the trivial group with a single element where the operation always gives back that single element. It turns out this satisfies all the axioms! One “better” example is the set of all nonnegative integers less than \(6\). Define an operation called <em>addition modulo 6</em> as follows: add two integers together and, if the result is greater than 6, subtract 6 from it until we have a new integer. Such a group is called \( \mathbb{Z}_6 \). In fact, we can define a group \( \mathbb{Z}_n \) for any positive integer \(n\).</p>
+<p>Of course, we don’t just care about groups as isolated entities. We also want to define something analogous to functions between groups. Notice that I said <em>something analogous to functions</em> and not <em>functions</em>. We normally think of functions as operating between sets, in which case no operation is involved. A function between sets has to be well-defined with respect to elements, so that we don’t simultaneously have \( f(1)=1 \) and \( f(1)=2 \). A “function” between groups has to be well-defined with respect to elements <em>and</em> operations. But what does it mean to be well-defined with respect to operations?</p>
+<p>What I could do here is give the condition immediately, but I find the long way illuminating. Say we have a set-function \(\phi\) from nonnegative integers less than 6 to nonnegative integers less than 3. We want to see if it could also be a sort of function between the groups \( \mathbb{Z}_6 \) and \( \mathbb{Z}_3 \). Consider the element 2 of \( \mathbb{Z}_6 \). As far as \( \mathbb{Z}_6 \) goes, \( 2=5+3 \). \(5+3\) is another way of saying \(2\), so we could evaluate the expression \(5+3\) first and then apply \(\) to it for \(\phi(5+3)\). \(5\) and \(3\) are bona fide elements of \( \mathbb{Z}_6 \) on their own, though, so we could proceed in the opposite order, applying \(\phi\) to each element first and then adding them. Then we would have \(\phi(2)+\phi(3)\). It really helps to draw a diagram:</p>
+<center>
+<img src="../images/homomorphism-condition.png">
+</center>
+<p>Well-definedness means we should be able to follow the arrows in any way in the above diagram and get the same value for \(x\) – the diagram should <em>commute</em>. In other words, we should have \(\phi(2+3)=\phi(2)+\phi(3)\). For arbitrary elements \(x\) and \(y\), we have:</p>
+<p>\[ \phi(x+y)=\phi(x)+\phi(y) \]</p>
+<p>Any mapping between groups obeying the above property is the group equivalent of a function – a <em>homomorphism</em>.</p>
+<p>For any two groups \( G \) and \( H \), the existence of a homomorphism \( \phi \) from \( G \) to \( H \) suggests that the groups have similar structures. \( H \) could have substantially fewer elements than \( G \), but its operation acts in a similar way. Have you ever heard about how mathematicians can’t distinguish between a coffee cup and a donut? Even though a coffee cup has a more “complicated” shape than a donut, they are both lumps of matter with a hole. We could continuously deform a coffee cup into a donut without breaking or tearing anything. \( G \) and \( H \) have the same relationship. If we want to to emphasize the relationship instead of the mapping, we can say \( H \) is a homomorphic image of \( G \).</p>
+<p>By applying \( \phi \) to \( G \), we preserve structure but often lose detail. Not always, though. It is possible that there is also a homomorphism \( \psi \) from \( H \) to \( G \), and that we can follow the two homomorphisms in sequence and end up in the same place; that is, \( \psi(\pi(G)) = G \). Have another diagram:</p>
+<center>
+<img src="../images/isomorphisms.png">
+</center>
+<p>The diagram suggests going from \( G \) to \( H \) does not involve any “loss of information”. We say in such cases that \( \phi \) and \( \psi \) are isomorphisms, or that \( G \) and \( H \) are isomorphic. But how similar do \( G \) and \( H \) have to be? In a sense, they have to be <em>the same group</em>! Think of \( G \) and \( H \) as being two representations of the same thing, like \( 1 +1 \) and \( 2 \).</p>
+<p>In abstract algebra, it is almost always correct to think of isomorphism as equality. It is extremely common, for instance, to say that an algebraic structure is unique <em>up to isomorphism</em>. Then, if we come up with two objects satisfying the requirements, they must be isomorphic.</p>
+<p>Believe it or not, the above introduction to group theory is not yet abstract enough! We now know what a group is, and can think about Burnside groups on a higher level, yet describing an arbitrary \( B(m,n) \) is still out of our grasp. We need “abstract abstract algebra”, better known as category theory.</p>
+<h2 id="category-theory">Category Theory</h2>
+<p>Categories are a little trickier than groups to define, but not by much. A category \( \mathscr{C} \) (the fancy script is of utmost importance) has two “kinds of things” in it:</p>
+<ul>
+<li>A set of objects denoted \( \mathrm{Obj}(\mathscr{C}) \).</li>
+<li>For any two objects \( A \) and \( B \) in \( \mathrm{Obj}(\mathscr{C}) \), a set of morphisms denoted \( \mathrm{Hom}_\mathscr{C}(A,B) \). We say that a morphism in \( \mathrm{Hom}_\mathscr{C}(A,B) \) has \( A \) as its <em>domain</em> and \( B \) as its <em>codomain</em>.</li>
+</ul>
+<p>Like any good mathematician, I will now start abusing notation. I will write morphisms as, say, \( f : A \to B \). That means \( f \) has domain \( A \) and codomain \( B \), but such notation does not specify which category we are working in. It will always be evident from context, though.</p>
+<p>The easiest example of a category is probably the category of sets, which I will denote \( \mathcal{Set} \). Any set you can think of is an object in \( \mathcal{Set} \). The morphisms of \( \mathcal{Set} \) are, of course, ordinary functions.</p>
+<p>Like groups, categories must obey certain axioms:</p>
+<ul>
+<li>Composition of morphisms is defined. For some morphism \( f : A \to B \) and \( g : B \to C \), we have another morphism \( f \circ g : A \to C \).</li>
+<li>Composition of morphisms is also associative such that, for \( f : A \to B \), \( g : B \to C \) and \( h : C \to D \), we can evaluate the expression \( f \circ g \circ h \) in any order and get the same morphism in the end.</li>
+<li>For any object \( A \), there is an identity morphism \( \iota_A : A \to A \). \( \iota_A \) has to actually be an identity, so that for \( f : A \to B \), we have \( \iota_A \circ f = f \circ \iota_B = f\).</li>
+</ul>
+<p>We’re getting into abstract nonsense territory, so have a diagram of a simple category:</p>
+<center>
+<img src="../images/cat-two.png">
+</center>
+<p>This is exactly the same as the isomorphisms diagram in the last section, but with the objects and morphisms renamed for the sake of generality. Notice that both objects have identity morphisms and every possible composition of morphisms yields a morphism that’s already there.</p>
+<p>Does \( \mathcal{Set} \) obey the category axioms? Yes, because otherwise I would not have given it as an example of a category. Non-tautologically, every set has an identity function from itself to itself. Also, if we compose two functions between sets, we have another function between two sets of the correct “domain” and “codomain”. Finally, composition of set functions is indeed associative.</p>
+<p>You are hopefully unsurprised that there is a category of groups, denoted \( \mathcal{Grp} \). As with \( \mathcal{Set} \), any group you can possibly imagine is in \( \mathcal{Grp} \). The morphisms of \( \mathcal{Grp} \), though, are homomorphisms as defined in the previous section. It turns out that the composition of two homomorphisms is always another homomorphism, every group is a homomorphic image of itself and homomorphism composition is associative, so \( \mathcal{Grp} \) really does satisfy the axioms for categories.</p>
+<p>Category theory is useful because it allows us to see the similarities in how mathematical objects relate to each other. The notion of an isomorphism is easily generalized to an arbitrary category. An isomorphism of \( \mathscr{C} \) is just some morphism \( f : A \to B \) such that there is another morphism \( g : B \to A \) and \( f \circ g = \iota_A \) — that is, \( f \) and \( g \) compose into an identity morphism. I already defined isomorphisms in \( \mathcal{Grp} \), but what about \( \mathcal{Set} \)? The isomorphisms of \( \mathcal{Set} \) are just the (bijective) functions between sets with the same number of elements. It might seem wrong that the sets \( \{1,2,3\} \) and \( \{math, German, economics\} \) are considered isomorphic in \( \mathcal{Set} \), but it just comes down to the fact that \( \mathcal{Set} \) doesn’t have much “going on”. An element of a set doesn’t “do anything” except be an element, so morphisms in the category \( \mathcal{Set} \) don’t give a rip what any given element fundamentally <em>is</em>.</p>
+<p>Two very important definitions in category theory for a category \( \mathscr{C} \) are:</p>
+<ul>
+<li>The <em>initial object</em> is that object \( A \) such that, for any object \( B \) of the category, there is one and <em>only</em> one morphism \( f : A \to B \).</li>
+<li>The <em>terminal object</em> is that object \( A \) such that, for any object \( B \) of the category, there is one and <em>only</em> one morphism \( f : B \to A \).</li>
+</ul>
+<p>I called these two concepts, but they are in a sense just one. Given any category \( \mathscr{C} \), we can always reverse all the morphisms and we end up with a new category denoted \( \mathscr{C}^{op} \). Obviously, an initial object in \( \mathscr{C} \) is a terminal object in \( \mathscr{C}^{op} \), and vice versa. The concepts of initial and terminal objects are therefore said to be <em>dual</em>.</p>
+<p>Take a moment to consider the initial and terminal objects of \( \mathcal{Set} \). In \( \mathcal{Set} \), the initial object is a set \( S \) such that, for any other set \( T \), there is only one set-function \( f : S \to T \). Such a set does exist: the empty set \( \varnothing \). Since the empty set has no elements, we can only define a function \( f : \varnothing \to T \) by saying absolutely nothing about where each “element of \( \varnothing \)” is sent, and there’s only one way to say nothing. Dually, the terminal objects of \( \mathcal{Set} \) are any sets with just one element. If \( T \) has just one element, then given any other set \( S \), there is only one way to define a function \( f : S \to T \) — by mapping every element of \( S \) to the single element of \( T \).</p>
+<p>So then \( \mathcal{Set} \) has just one initial object, but infinitely many terminal objects, because there are infinitely many single-element sets. Why, then, did I refer to <em>the</em> terminal object? My justification is that <em>any two initial or terminal objects of a category are isomorphic</em>. That holds no matter what category we are operating in, and no matter what isomorphism means in our category. I won’t formally prove this important fact, but it’s fairly intuitive. If you don’t believe me, try drawing a category yourself and make multiple objects initial or terminal. You’ll find that there can only be one morphism in each direction between two initial or terminal objects, and then those morphisms must compose to an identity in either order.</p>
+<p>As a hopefully interesting aside, initial and terminal objects overlap entirely within \( \mathcal{Grp} \). Given any object \( G \) of \( \mathcal{Grp} \) — that is, any group \( G \) — there is only one homomorphism \( \phi : G \to \{*\} \), sending each element of G to the single element of \( \{*\} \). There is also only one homomorphism \( \phi : \{*\} \to G \), sending the one element of \( \{*\} \) to the identity of \( G \). Then the trivial group (or <em>a</em> trivial group, we should perhaps say, but they are all isomorphic anyway) is an initial and terminal object, a <em>zero object</em>, as they are sometimes called.</p>
+<p>The existence of zero objects in a category implies something rather interesting — that we can find a morphism between any two arbitrary objects. That property fails in \( \mathcal{Set} \), where there never exists a morphism \( f : A \to \varnothing \) for nonempty \( A \). Otherwise \( f \) would need to map some element of \( A \) to an element of \( \varnothing \), which has no elements! In \( \mathcal{Grp} \), though, given objects \( G \) and \( H \), there are trivial homomorphisms \( f : G \to \{*\} \) and \( g : \{*\} \to H \). We can compose them for a homomorphism \( f \circ h : G \to H \). \( f \) is supremely uninteresting, mapping every element of \( G \) to the identity of \( H \), but it is worth noting that it always exists.</p>
+<p>Remember that isomorphism often works just like equality. Defining a category and then finding its initial objects is then an excellent way of finding some mathematical entity that does the best job of fulfilling some goal. <em>If</em> the initial object exists, and <em>if</em> we can find it, then we will be done, because any other entity satisfying the goal is isomorphic. Such a construction is called a <em>universal property</em>.</p>
+<h2 id="universal-properties">Universal Properties</h2>
+<p>It should be no surprise that there is a universal property defining the Burnside group \( B(m,n) \). The property is as follows:</p>
+<p><em>B(m,n) is that group \(G\) generated with \(m\) distinct “letters” with the property that any letter operated on itself \(n\) times is the identity such that, for any other \(H\) obeying the same properties, there is a unique homomorphism \( \phi : G \to H \)</em>.</p>
+<p>This is an oddly elliptical way of defining what is a fairly intuitive idea. I’ll try to convince you that it’s the best way of finding the Burnside group \( B(m,n) \). The universal property actually identifies the Burnside group as the initial object of a category; I’ll call this category \( \mathscr{B}_{m,n} \). The objects of \( \mathscr{B}_{m,n} \) are diagrams, or collections of objects and morphisms, that look like this:</p>
+<center>
+<img src="../images/burnside-obj.png">
+</center>
+<p>Each object in \( \mathscr{B}_{m,n} \) is a candidate for <em>the</em> Burnside group \( B(m,n) \). The group itself is \( B \); we also have a set-function \( f \) identifying each “letter” in the “alphabet” \( \Sigma \) with an element of \( B \). We also have that every element of \( B \) raised to the \(n\)th power is the identity. Notice that the diagram itself is <em>not</em> a category; even though it has objects and morphisms, there are no identity morphisms and the objects are respectively a set and a group! We don’t need it to be itself a category, though.</p>
+<p>There is only one, admittedly not obvious, way to define morphisms in \( \mathscr{B}_{m,n} \):</p>
+<center>
+<img src="../images/burnside-mor.png">
+</center>
+<p>There are two groups, \( B \) and \( C \) acting as candidates for \( B(m,n) \). Both of them draw from the same alphabet \( \Sigma \); there was no point in representing \( \Sigma \) twice, so the diagram is triangular. Moreover, there exists a homomorphism \( \phi \) between \( B \) and \( C \). Such a homomorphism does in fact exist due to both \( B \) and \( C \) obeying the \(n\)th powers condition; I hope you will forgive me for neglecting to prove this fact. We can, in fact, compose morphisms in \( \mathscr{B}_{m,n} \). The following diagram represents two morphisms of the category:</p>
+<center>
+<img src="../images/burnside-mor-mor.png">
+</center>
+<p>We can eliminate the middle and compose the homomorphisms \( \phi \) and \( \psi \):</p>
+<center>
+<img src="../images/burnside-comp.png">
+</center>
+<p>where \( \psi \circ \phi \) is automatically another homomorphism.</p>
+<p>It is hard for someone to hold all of these things in their head at the same time. However, if you manage to do so, you’ll see that the universal property from earlier is just asking for the initial object of the category \( \mathscr{B}_{m,n} \).</p>
+<p>Just defining the universal property for a Burnside group \( B(m,n) \) is not enough to concretely describe \( B(m,n) \) in every case. It does, however, ensure that \( B(m,n) \) is unique up to isomorphism. One (relatively) easy case is the Burnside group \( B(1,6) \). I will show that \( B(1,6) \) is just \( \mathbb{Z}_6 \) as defined earlier.</p>
+<p>The category \( \mathscr{B}_{1,6} \) has an alphabet of only one element, so \( \Sigma = \{ a \} \). An arbitrary morphism looks like this:</p>
+<center>
+<img src="../images/burnside-mor-z6.png">
+</center>
+<p>We need there to be only one such morphism for any \( C \). Is this the case? Yes! First, we do in fact have that such a morphism exists, because we can always define \( \phi \) by \( \phi(1)=i_C \), where \( 1 \) is in \( \mathbb{Z}_6 \) and \( i_C \) is some generator of \( C \). Then we need to show \( \phi \) is unique. By some group theory that I unfortunately did not get into in this post, it needs to hold that \( f(a)=1 \) and \( f(a)=i_C \). Then, by the commutativity of the diagram, we <em>need</em> to have \( \phi(1)= i_C \). From there, the homomorphism \( \phi \) and by extension the entire morphism-diagram is defined.</p>
+<p>To be honest, the above paragraph isn’t quite a proof — it skips over too many details. That said, it provides the outline of an airtight proof that \( B(1,6) \cong \mathbb{Z}_6 \). If you wanted to identify some \( B(m,n) \) up to isomorphism, this is how you would do it.</p>
+<h2 id="coda">Coda</h2>
+<p>The category-theoretical definition of \( B(m,n) \), when followed carefully, allows the mathemetician to avoid pitfalls. One Burnside group that has been “solved” is \( B(2,3) \), which has 27 elements. The number 27 was not at all obvious to me. I tried listing elements of \( B(2,3) \) and rapidly came up with more than 27 seemingly distinct elements.</p>
+<p>“Seemingly” is the operative word in the previous sentence; I had listed (for instance) both \(aba\) and \( b^2 a^2 b^2 \), which are the same! Note that <em>any</em> element in \( B(2,3) \) operated on itself three times is the identity, so, for instance, \( (ab)^3 = ababab=e \). Then we have \( aba=b^{-1} a^{-1} b^{-1}\). But \(a^2 * a = a^3 = e \) and \(b^2 * b = b^3 = e \), so by the uniqueness of inverses, \( a^{-1} =a^2 \) and \( b^{-1} =b^2 \). It follows that \(aba=b^2 a^2 b^2 \), as claimed.</p>
+<p>The unfortunately named <a href="https://en.wikipedia.org/wiki/Word_problem_for_groups">word problem for groups</a> deals with determining if two elements of a Burnside group \( B(m,n) \) are equal given their letter representations. (Actually, it’s a little bit more general than that, but that’s what it is for our purposes). It turns out that the word problem for groups is <em>undecidable</em> in general. We can prove equality and inequality on a case by case basis, but there is no algorithm answering the question for any such group. \( B(2,5) \), as it turns out, is one of the hard cases.</p>
+
+        </div>
+        <div id="footer">
+            Site proudly generated by
+            <a href="https://jaspervdj.be/hakyll">Hakyll</a>;
+            theme by <a href="https://github.com/katychuang/hakyll-cssgarden">katychuang</a>
+        </div>
+    </body>
+</html>

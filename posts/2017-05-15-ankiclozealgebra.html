@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Henry Zelenka - The algebra of Anki cloze deletions</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">Henry Zelenka</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../archive.html">Blog</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>The algebra of Anki cloze deletions</h1>
+
+            <div class="info">
+    Posted on May 15, 2017
+    
+</div>
+
+<p><a href="https://apps.ankiweb.net/">Anki</a> is a wonderful flash card app that I started using in earnest a few weeks ago. It leverages <a href="https://en.wikipedia.org/wiki/Spaced_repetition">spaced repetition</a> to present flash cards around when you would have forgotten their content. As you go through cards, you tell the software how well you remembered the information; the worse you remembered it, the sooner you’ll see it again.</p>
+<p>Anki also allows lots of customization; you can style your cards with CSS and LaTeX and use as many fields as you wants. Customizability is a blessing and a curse, making Anki more powerful but also more intimidating to learn. It’s definitely worth it, though.</p>
+<p>Advertising Anki, while certainly worthwhile, is not the topic of this post. Instead I wanted to talk about why I love cloze deletions.</p>
+<p>There are lots of ways to format Anki cards, but several obvious ones. The most obvious is a card with two fields. Today I learned a wonderful German word, <em>die Schadesoftware</em>, or <em>the malware</em>. Yes, that’s the same <em>Schade</em> from <em>Schadefreude</em>. Anyway, here’s the two-field <em>Schadesoftware</em> card:</p>
+<center>
+the malware
+<hr>
+the malware<br> die Schadesoftware
+</center>
+<p>The front side of the card is above the horizontal rule and the back side is beneath it. If I successfully translated malware to Schadesoftware, I say so to Anki and I won’t see the card for a while. Otherwise, I’ll be asked to translate malware again later in the study session.</p>
+<p>These kinds of cards are straightforward to form, and I’d argue that for a word like <em>Schadesoftware</em> there isn’t much point in doing much more. <em>Schadesoftware</em> doesn’t have a wide range of meanings. Linguee lists <a href="http://www.linguee.com/german-english/translation/Schadsoftware.html">only one potential translation other than malware</a>, and it’s not that common. It’s dangerous to think of translation as application of equivalences (“The word for X in language Y is Z”), because translation is almost never a one-to-one-correspondence. It gets close for malware/Schadesoftware, though.</p>
+<p>What if I come across a new word that’s more complicated? I recently read <a href="http://www.spieletipps.de/tipps-50772-bravely-default-2-alle-jobs-klassen-guide/">a German webpage on one of my favorite video games</a>.</p>
+<blockquote>
+<em>Der Astrologe liest in den Steren, um die Statuswerte seiner Verbündeten zu erhöhen. Dabei ist er äußerst geschickt mit der Monsmagie und bevorzugt Ruten, um seine Magie besser wirken zu können.</em>
+</blockquote>
+<p>Translation:</p>
+<blockquote>
+<em>The astrologian reads in the stars to up the stats of his comrades. Meanwhile he is ??? gifted with lunar magic and prefers rods to be able to better work his magic.</em>
+</blockquote>
+<p>The question marks are in there to convey the effect this sentence first had on me. I knew all the German words except for <em>äußerst</em> (which is pronounced sort of like oyster, but without the initial t and with an <em>st</em> at the end).</p>
+<p>The context, however, is <em>extremely</em> informative here. The web page described all the “jobs” available in the video game. I don’t want to bore anyone to tears by giving an extended explanation of the “job system” (I did stuff like that all the time when I was younger), but a job in this video game is essentially a set of abilities a playable character can take on.</p>
+<p>Theoretically, ??? could be filled with any adverb. Yet this page presented a list of simple descriptions of jobs, and obviously such a description emphasizes what each job is good at. Then <em>äußerst</em> can’t mean “not very” or something like that. What would make sense is for <em>äußerst</em> to strengthen a quality, but not in a way that sounds threatening. “Dangerously”, for example, sounds strange in context. In a sense, the expected translation for <em>äußerst</em> is “extremely” or “ultimately”, and that is indeed <a href="http://www.linguee.com/german-english/translation/%C3%A4u%C3%9Ferst.html">exactly what Linguee told me</a>.</p>
+<p>It isn’t always this straightforward to guess the meaning of a word from context, but it is usually possible to guess <em>something</em>. That’s why it’s such a great idea to put example sentences on Anki cards. Here’s how I actually made my card for <em>äußerst</em></p>
+<center>
+ultimate, utter, extremely
+<hr>
+äußerst<br> Der Astrologe liest in den Steren, um die Statuswerte seiner Verbündeten zu erhöhen. Dabei ist er äußerst geschickt mit der Monsmagie und bevorzugt Ruten, um seine Magie besser wirken zu können.
+</center>
+
+        </div>
+        <div id="footer">
+            Site proudly generated by
+            <a href="https://jaspervdj.be/hakyll">Hakyll</a>;
+            theme by <a href="https://github.com/katychuang/hakyll-cssgarden">katychuang</a>
+        </div>
+    </body>
+</html>
